@@ -1,0 +1,187 @@
+//
+@import "../fonts/fonts-style.scss";
+@import "../varriable/var.scss";
+
+//
+
+body,
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+li {
+  list-style: none;
+}
+// временно
+
+img {
+  width: 30px;
+}
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 900px;
+}
+
+.nav_header {
+  background-color: $bg;
+  display: grid;
+  grid-row: 1 / 2;
+
+  // logo
+  .nav_logo {
+    color: #fff;
+    filter: $filter;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    align-content: center;
+
+    span {
+      font-size: 20px;
+      font-family: bold;
+    }
+  }
+
+  // mark.list
+  .nav_notification {
+    display: grid;
+    color: #fff;
+    filter: $filter;
+    grid-gap: 2rem;
+    .nav_navigator_u {
+      padding: 0;
+      margin: 0;
+      padding-left: 10px;
+
+      display: grid;
+      grid-template-rows: repeat(6, 40px);
+      li {
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .li_home {
+        background-image: url("/icon/home-account.svg");
+        width: 30px;
+        height: 30px;
+      }
+      .li_profile {
+        background-image: url("/icon/passport-biometric.svg");
+        width: 30px;
+        height: 30px;
+      }
+      .li_message {
+        background-image: url("/icon/message.svg");
+        width: 30px;
+        height: 30px;
+      }
+      .li_history {
+        background-image: url("/icon/history.svg");
+        width: 30px;
+        height: 30px;
+      }
+      .li_tasks {
+        background-image: url("/icon/calendar-check.svg");
+        width: 30px;
+        height: 30px;
+      }
+      .li_communities {
+        background-image: url("/icon/account-multiple.svg");
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .nav_navigator_d {
+      padding: 0;
+      margin: 0;
+      padding-left: 10px;
+
+      display: grid;
+      grid-template-rows: repeat(3, 40px);
+      li {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .li_settings {
+        background-image: url("/icon/cog.svg");
+        width: 30px;
+        height: 30px;
+      }
+      .li_support {
+        background-image: url("/icon/face-agent.svg");
+        width: 30px;
+        height: 30px;
+      }
+      .li_privacy {
+        background-image: url("/icon/secure.svg");
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.each_cont {
+  display: grid;
+  grid-column: 2 / span 3;
+  .each_page {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: 50px;
+    align-items: center;
+  }
+  .each_input {
+    display: grid;
+    grid-template-columns: 50px 400px;
+    img {
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+    input {
+      display: block;
+      width: 500px;
+      border-radius: 10px;
+      margin-left: 10px;
+      background-color: #e2e8f0;
+      border: none;
+    }
+  }
+  .each_user {
+    padding: 1rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 50px 50px 150px;
+    justify-content: end;
+    align-items: center;
+    p {
+      font-weight: bold;
+    }
+  }
+}
+.each_list {
+  display: grid;
+  grid-column: 4 / 2;
+}
+.each_user_radius img {
+  width: 40px;
+  height: 40px;
+  background-attachment: fixed;
+  background-position: center;
+  border-radius: 50%;
+}
+
+// each - e - { color : 1992d4 HEX }<- blue
