@@ -1,135 +1,60 @@
 @import "../fonts/fonts-style.scss";
 @import "../varriable/var.scss";
 
-body,
-h1,
-h2,
-h3,
-p {
+html, body { 
+  height: 100%;
   padding: 0;
   margin: 0;
 }
 
-li {
+ul,li { 
   list-style: none;
 }
 
-img {
-  width: 30px;
-}
-
-body {
-  font-family: "IBM Plex Sans", sans-serif;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-}
-
-.nav_header {
-  background-color: $bg;
-  height: 100vh;
-
-  .nav_logo {
-    color: #fff;
-    filter: $filter;
-    padding: 1rem;
+.container { 
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    justify-content: center;
-    align-items: center;
-
-    span {
-      font-size: 33px;
-      font-family: bold;
-    }
+    grid-template-columns: 1fr 5fr;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: bold;
+    height: 100%;
+}
+.header { 
+  padding: 1rem;
+  background-color: $bg;  
+  ul > li { 
+    filter: $filter;
   }
-
-  .nav_notification {
-    display: grid;
-    color: #fff;
-    filter: $filter;
-    grid-gap: 2rem;
-
-    .nav_navigator_u,
-    .nav_navigator_d {
-      padding: 0 0 0 10px;
-      margin: 0;
-      display: grid;
-      grid-gap: 0.3rem;
-
-      li {
+  // 
+    .logo > ul{ 
+          display: grid;
+          grid-template-columns: 0.3fr 1fr;
+          align-items: center;
+          gap: 1rem;
+          img { 
+            width: 50px;
+          }
+          p { 
+            font-size: 30px;
+          }
+    }
+    .header_list_up > ul { 
+        li  { 
+          display: grid;
+          grid-template-columns: 0.3fr 1fr;
+          align-items: center;
+        }
+        li > img { 
+          width: 30px;
+        }
+    }
+    .header_list_down > ul { 
+      li { 
         display: grid;
+        grid-template-columns: 0.3fr 1fr;
         align-items: center;
-        gap: 1rem;
-        background-repeat: no-repeat;
       }
-
-      .li_home,
-      .li_profile,
-      .li_message,
-      .li_history,
-      .li_tasks,
-      .li_communities,
-      .li_settings,
-      .li_support,
-      .li_privacy {
+      li > img { 
         width: 30px;
-        height: 30px;
       }
-
-      .li_home { background-image: url("/icon/home-account.svg"); }
-      .li_profile { background-image: url("/icon/passport-biometric.svg"); }
-      .li_message { background-image: url("/icon/message.svg"); }
-      .li_history { background-image: url("/icon/history.svg"); }
-      .li_tasks { background-image: url("/icon/calendar-check.svg"); }
-      .li_communities { background-image: url("/icon/account-multiple.svg"); }
-      .li_settings { background-image: url("/icon/cog.svg"); }
-      .li_support { background-image: url("/icon/face-agent.svg"); }
-      .li_privacy { background-image: url("/icon/secure.svg"); }
     }
-
-    .nav_navigator_d {
-      grid-template-rows: repeat(3, 40px);
-    }
-  }
-}
-
-.each_cont {
-  .each_page {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    align-items: center;
-  }
-
-  .each_input {
-    display: grid;
-    grid-template-columns: 50px 400px;
-
-    img {
-      margin-left: 20px;
-    }
-
-    input {
-      border-radius: 10px;
-      margin-left: 10px;
-      background-color: #e2e8f0;
-      border: none;
-    }
-  }
-
-  .each_user > ul {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    align-items: center;
-  }
-}
-
-.each_user_radius img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-attachment: fixed;
-  background-position: center;
 }

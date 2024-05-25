@@ -1,156 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-body,
-h1,
-h2,
-h3,
-p {
+html, body {
+  height: 100%;
   padding: 0;
   margin: 0;
 }
 
-li {
+ul, li {
   list-style: none;
-}
-
-img {
-  width: 30px;
-}
-
-body {
-  font-family: "IBM Plex Sans", sans-serif;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 5fr;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: bold;
+  height: 100%;
 }
 
-.nav_header {
-  background-color: #1992d4;
-  height: 100vh;
-}
-.nav_header .nav_logo {
-  color: #fff;
-  filter: brightness(0) saturate(100%) invert(100%);
+.header {
   padding: 1rem;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  justify-content: center;
-  align-items: center;
+  background-color: #1992d4;
 }
-.nav_header .nav_logo span {
-  font-size: 33px;
-  font-family: bold;
-}
-.nav_header .nav_notification {
-  display: grid;
-  color: #fff;
+.header ul > li {
   filter: brightness(0) saturate(100%) invert(100%);
-  grid-gap: 2rem;
 }
-.nav_header .nav_notification .nav_navigator_u,
-.nav_header .nav_notification .nav_navigator_d {
-  padding: 0 0 0 10px;
-  margin: 0;
+.header .logo > ul {
   display: grid;
-  grid-gap: 0.3rem;
-}
-.nav_header .nav_notification .nav_navigator_u li,
-.nav_header .nav_notification .nav_navigator_d li {
-  display: grid;
+  grid-template-columns: 0.3fr 1fr;
   align-items: center;
   gap: 1rem;
-  background-repeat: no-repeat;
 }
-.nav_header .nav_notification .nav_navigator_u .li_home,
-.nav_header .nav_notification .nav_navigator_u .li_profile,
-.nav_header .nav_notification .nav_navigator_u .li_message,
-.nav_header .nav_notification .nav_navigator_u .li_history,
-.nav_header .nav_notification .nav_navigator_u .li_tasks,
-.nav_header .nav_notification .nav_navigator_u .li_communities,
-.nav_header .nav_notification .nav_navigator_u .li_settings,
-.nav_header .nav_notification .nav_navigator_u .li_support,
-.nav_header .nav_notification .nav_navigator_u .li_privacy,
-.nav_header .nav_notification .nav_navigator_d .li_home,
-.nav_header .nav_notification .nav_navigator_d .li_profile,
-.nav_header .nav_notification .nav_navigator_d .li_message,
-.nav_header .nav_notification .nav_navigator_d .li_history,
-.nav_header .nav_notification .nav_navigator_d .li_tasks,
-.nav_header .nav_notification .nav_navigator_d .li_communities,
-.nav_header .nav_notification .nav_navigator_d .li_settings,
-.nav_header .nav_notification .nav_navigator_d .li_support,
-.nav_header .nav_notification .nav_navigator_d .li_privacy {
+.header .logo > ul img {
+  width: 50px;
+}
+.header .logo > ul p {
+  font-size: 30px;
+}
+.header .header_list_up > ul li {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  align-items: center;
+}
+.header .header_list_up > ul li > img {
   width: 30px;
-  height: 30px;
 }
-.nav_header .nav_notification .nav_navigator_u .li_home,
-.nav_header .nav_notification .nav_navigator_d .li_home {
-  background-image: url("/icon/home-account.svg");
-}
-.nav_header .nav_notification .nav_navigator_u .li_profile,
-.nav_header .nav_notification .nav_navigator_d .li_profile {
-  background-image: url("/icon/passport-biometric.svg");
-}
-.nav_header .nav_notification .nav_navigator_u .li_message,
-.nav_header .nav_notification .nav_navigator_d .li_message {
-  background-image: url("/icon/message.svg");
-}
-.nav_header .nav_notification .nav_navigator_u .li_history,
-.nav_header .nav_notification .nav_navigator_d .li_history {
-  background-image: url("/icon/history.svg");
-}
-.nav_header .nav_notification .nav_navigator_u .li_tasks,
-.nav_header .nav_notification .nav_navigator_d .li_tasks {
-  background-image: url("/icon/calendar-check.svg");
-}
-.nav_header .nav_notification .nav_navigator_u .li_communities,
-.nav_header .nav_notification .nav_navigator_d .li_communities {
-  background-image: url("/icon/account-multiple.svg");
-}
-.nav_header .nav_notification .nav_navigator_u .li_settings,
-.nav_header .nav_notification .nav_navigator_d .li_settings {
-  background-image: url("/icon/cog.svg");
-}
-.nav_header .nav_notification .nav_navigator_u .li_support,
-.nav_header .nav_notification .nav_navigator_d .li_support {
-  background-image: url("/icon/face-agent.svg");
-}
-.nav_header .nav_notification .nav_navigator_u .li_privacy,
-.nav_header .nav_notification .nav_navigator_d .li_privacy {
-  background-image: url("/icon/secure.svg");
-}
-.nav_header .nav_notification .nav_navigator_d {
-  grid-template-rows: repeat(3, 40px);
-}
-
-.each_cont .each_page {
+.header .header_list_down > ul li {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 0.3fr 1fr;
   align-items: center;
 }
-.each_cont .each_input {
-  display: grid;
-  grid-template-columns: 50px 400px;
-}
-.each_cont .each_input img {
-  margin-left: 20px;
-}
-.each_cont .each_input input {
-  border-radius: 10px;
-  margin-left: 10px;
-  background-color: #e2e8f0;
-  border: none;
-}
-.each_cont .each_user > ul {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  align-items: center;
-}
-
-.each_user_radius img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-attachment: fixed;
-  background-position: center;
+.header .header_list_down > ul li > img {
+  width: 30px;
 }/*# sourceMappingURL=main.css.map */
