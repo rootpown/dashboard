@@ -10,21 +10,115 @@ html, body {
 ul,li { 
   list-style: none;
 }
+img { 
+  width: 50px;
+}
 
 .container { 
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 4fr;
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: bold;
     height: 100%;
 }
-.header { 
+.header{
+    // после оконачния блока задать display:grid -> раазместить сетку
+    display: grid;
+    grid-column: 2 / 3;
+    grid-template-rows: 100px;
+    -webkit-box-shadow: 4px 27px 70px 1px rgba(171, 171, 189, 1);
+-moz-box-shadow: 4px 27px 70px 1px rgba(171, 171, 189, 1);
+box-shadow: 4px 27px 70px 1px rgba(171, 171, 189, 1);
+
+}
+.header_up{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+  .header_left ul {
+    display: grid;
+    grid-template-columns: 60px auto;
+    img  {
+      width: 30px;
+    }
+  }
+  .search_bar { 
+    background-color: #e2e8f0;
+    width: 500px;
+    height: 30px;
+    border-radius: 20px;
+  }
+  .header_right > ul { 
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      align-items: center;
+      li { 
+          img[alt="bell-ring"] { 
+            width: 35px;
+          }
+          img { 
+            width: 50px;
+            border-radius: 50%;
+          }
+      }
+  }
+
+}
+.header_button { 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  .header_button_left > ul {
+      display: grid;
+      grid-template-columns: 100px 500px;
+      gap: 1rem;
+      align-items: center;
+    li { 
+      h1,h5 { 
+        line-height: 0.5;
+      }
+      img { 
+        width: 100px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .header_button_right > ul{ 
+        display: grid;
+        grid-template-columns: repeat(3, 0.2fr);
+        align-items: center;
+        justify-content: end;
+        gap: 1rem;
+        text-align: center;
+
+    li {
+
+      font-size: 20px;
+      color: #fff;
+      width: 100px;
+      height: 20px;
+      background-color: #1992d4;
+      padding: 20px 15px 20px 15px;
+      border-radius: 30px;
+    
+    }
+    
+  }
+
+}
+
+.sidebar { 
+  display: grid;
+  grid-row: 1 / -3;
   padding: 1rem;
   background-color: $bg;  
+
   ul > li { 
     filter: $filter;
   }
-  // 
+  
     .logo > ul{ 
           display: grid;
           grid-template-columns: 0.3fr 1fr;
@@ -37,7 +131,7 @@ ul,li {
             font-size: 30px;
           }
     }
-    .header_list_up > ul { 
+    .sidebar_list_up > ul { 
         li  { 
           display: grid;
           grid-template-columns: 0.3fr 1fr;
@@ -47,7 +141,7 @@ ul,li {
           width: 30px;
         }
     }
-    .header_list_down > ul { 
+    .sidebar_list_down > ul { 
       li { 
         display: grid;
         grid-template-columns: 0.3fr 1fr;
