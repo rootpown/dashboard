@@ -6,7 +6,6 @@ h3,
 p {
   padding: 0;
   margin: 0;
-  overflow: hidden;
 }
 
 li {
@@ -24,24 +23,23 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 900px;
 }
 
 .nav_header {
   background-color: #1992d4;
-  display: grid;
-  grid-row: 1/2;
+  height: 100vh;
 }
 .nav_header .nav_logo {
   color: #fff;
   filter: brightness(0) saturate(100%) invert(100%);
+  padding: 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  justify-content: center;
   align-items: center;
-  align-content: center;
 }
 .nav_header .nav_logo span {
-  font-size: 20px;
+  font-size: 33px;
   font-family: bold;
 }
 .nav_header .nav_notification {
@@ -50,85 +48,84 @@ body {
   filter: brightness(0) saturate(100%) invert(100%);
   grid-gap: 2rem;
 }
-.nav_header .nav_notification .nav_navigator_u {
-  padding: 0;
-  margin: 0;
-  padding-left: 10px;
-  display: grid;
-  grid-template-rows: repeat(6, 40px);
-}
-.nav_header .nav_notification .nav_navigator_u li {
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.nav_header .nav_notification .nav_navigator_u .li_home {
-  background-image: url("/icon/home-account.svg");
-  width: 30px;
-  height: 30px;
-}
-.nav_header .nav_notification .nav_navigator_u .li_profile {
-  background-image: url("/icon/passport-biometric.svg");
-  width: 30px;
-  height: 30px;
-}
-.nav_header .nav_notification .nav_navigator_u .li_message {
-  background-image: url("/icon/message.svg");
-  width: 30px;
-  height: 30px;
-}
-.nav_header .nav_notification .nav_navigator_u .li_history {
-  background-image: url("/icon/history.svg");
-  width: 30px;
-  height: 30px;
-}
-.nav_header .nav_notification .nav_navigator_u .li_tasks {
-  background-image: url("/icon/calendar-check.svg");
-  width: 30px;
-  height: 30px;
-}
-.nav_header .nav_notification .nav_navigator_u .li_communities {
-  background-image: url("/icon/account-multiple.svg");
-  width: 30px;
-  height: 30px;
-}
+.nav_header .nav_notification .nav_navigator_u,
 .nav_header .nav_notification .nav_navigator_d {
-  padding: 0;
+  padding: 0 0 0 10px;
   margin: 0;
-  padding-left: 10px;
   display: grid;
-  grid-template-rows: repeat(3, 40px);
+  grid-gap: 0.3rem;
 }
+.nav_header .nav_notification .nav_navigator_u li,
 .nav_header .nav_notification .nav_navigator_d li {
-  display: flex;
-  gap: 1rem;
+  display: grid;
   align-items: center;
+  gap: 1rem;
+  background-repeat: no-repeat;
 }
+.nav_header .nav_notification .nav_navigator_u .li_home,
+.nav_header .nav_notification .nav_navigator_u .li_profile,
+.nav_header .nav_notification .nav_navigator_u .li_message,
+.nav_header .nav_notification .nav_navigator_u .li_history,
+.nav_header .nav_notification .nav_navigator_u .li_tasks,
+.nav_header .nav_notification .nav_navigator_u .li_communities,
+.nav_header .nav_notification .nav_navigator_u .li_settings,
+.nav_header .nav_notification .nav_navigator_u .li_support,
+.nav_header .nav_notification .nav_navigator_u .li_privacy,
+.nav_header .nav_notification .nav_navigator_d .li_home,
+.nav_header .nav_notification .nav_navigator_d .li_profile,
+.nav_header .nav_notification .nav_navigator_d .li_message,
+.nav_header .nav_notification .nav_navigator_d .li_history,
+.nav_header .nav_notification .nav_navigator_d .li_tasks,
+.nav_header .nav_notification .nav_navigator_d .li_communities,
+.nav_header .nav_notification .nav_navigator_d .li_settings,
+.nav_header .nav_notification .nav_navigator_d .li_support,
+.nav_header .nav_notification .nav_navigator_d .li_privacy {
+  width: 30px;
+  height: 30px;
+}
+.nav_header .nav_notification .nav_navigator_u .li_home,
+.nav_header .nav_notification .nav_navigator_d .li_home {
+  background-image: url("/icon/home-account.svg");
+}
+.nav_header .nav_notification .nav_navigator_u .li_profile,
+.nav_header .nav_notification .nav_navigator_d .li_profile {
+  background-image: url("/icon/passport-biometric.svg");
+}
+.nav_header .nav_notification .nav_navigator_u .li_message,
+.nav_header .nav_notification .nav_navigator_d .li_message {
+  background-image: url("/icon/message.svg");
+}
+.nav_header .nav_notification .nav_navigator_u .li_history,
+.nav_header .nav_notification .nav_navigator_d .li_history {
+  background-image: url("/icon/history.svg");
+}
+.nav_header .nav_notification .nav_navigator_u .li_tasks,
+.nav_header .nav_notification .nav_navigator_d .li_tasks {
+  background-image: url("/icon/calendar-check.svg");
+}
+.nav_header .nav_notification .nav_navigator_u .li_communities,
+.nav_header .nav_notification .nav_navigator_d .li_communities {
+  background-image: url("/icon/account-multiple.svg");
+}
+.nav_header .nav_notification .nav_navigator_u .li_settings,
 .nav_header .nav_notification .nav_navigator_d .li_settings {
   background-image: url("/icon/cog.svg");
-  width: 30px;
-  height: 30px;
 }
+.nav_header .nav_notification .nav_navigator_u .li_support,
 .nav_header .nav_notification .nav_navigator_d .li_support {
   background-image: url("/icon/face-agent.svg");
-  width: 30px;
-  height: 30px;
 }
+.nav_header .nav_notification .nav_navigator_u .li_privacy,
 .nav_header .nav_notification .nav_navigator_d .li_privacy {
   background-image: url("/icon/secure.svg");
-  width: 30px;
-  height: 30px;
+}
+.nav_header .nav_notification .nav_navigator_d {
+  grid-template-rows: repeat(3, 40px);
 }
 
-.each_cont {
-  display: grid;
-  grid-column: 2/span 3;
-}
 .each_cont .each_page {
   display: grid;
-  grid-template-columns: 500px 1fr;
-  grid-template-rows: 50px;
+  grid-template-columns: 3fr 1fr;
   align-items: center;
 }
 .each_cont .each_input {
@@ -137,38 +134,23 @@ body {
 }
 .each_cont .each_input img {
   margin-left: 20px;
-  display: flex;
-  align-items: center;
 }
 .each_cont .each_input input {
-  display: block;
-  width: 500px;
   border-radius: 10px;
   margin-left: 10px;
   background-color: #e2e8f0;
   border: none;
 }
-.each_cont .each_user {
-  padding: 1rem;
+.each_cont .each_user > ul {
   display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 50px 50px 150px;
-  justify-content: end;
+  grid-template-columns: repeat(3, auto);
   align-items: center;
-}
-.each_cont .each_user p {
-  font-weight: bold;
-}
-
-.each_list {
-  display: grid;
-  grid-column: 4/2;
 }
 
 .each_user_radius img {
   width: 40px;
   height: 40px;
+  border-radius: 50%;
   background-attachment: fixed;
   background-position: center;
-  border-radius: 50%;
 }/*# sourceMappingURL=main.css.map */
