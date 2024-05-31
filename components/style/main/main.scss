@@ -24,10 +24,9 @@ img {
   height: 100%;
 }
 .header {
-  // после оконачния блока задать display:grid -> раазместить сетку
   display: grid;
   grid-column: 2 / 3;
-  grid-template-rows: 100px;
+  grid-template-rows: repeat(auto-fill, 100px);
   -webkit-box-shadow: 4px 27px 70px 1px rgba(171, 171, 189, 1);
   -moz-box-shadow: 4px 27px 70px 1px rgba(171, 171, 189, 1);
   box-shadow: 4px 27px 70px 1px rgba(171, 171, 189, 1);
@@ -45,7 +44,7 @@ img {
   }
   .search_bar {
     background-color: #e2e8f0;
-    width: 500px;
+    width: 50%;
     height: 30px;
     border-radius: 20px;
   }
@@ -198,6 +197,22 @@ img {
     gap: 1rem;
     & img {
       width: 30px;
+    }
+  }
+}
+.main_aside {
+}
+
+.main_aside_row {
+  .main-aside_top {
+  }
+  .main_aside_block_list {
+    background-color: #ffffff;
+
+    .white_board {
+      width: 250px;
+      height: 5px;
+      background-color: #e5e5e5;
     }
   }
 }

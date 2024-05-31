@@ -26,7 +26,7 @@ img {
 .header {
   display: grid;
   grid-column: 2/3;
-  grid-template-rows: 100px;
+  grid-template-rows: repeat(auto-fill, 100px);
   box-shadow: 4px 27px 70px 1px rgb(171, 171, 189);
 }
 
@@ -44,7 +44,7 @@ img {
 }
 .header_up .search_bar {
   background-color: #e2e8f0;
-  width: 500px;
+  width: 50%;
   height: 30px;
   border-radius: 20px;
 }
@@ -182,4 +182,13 @@ img {
 }
 .main_card .main_imgs img {
   width: 30px;
+}
+
+.main_aside_row .main_aside_block_list {
+  background-color: #ffffff;
+}
+.main_aside_row .main_aside_block_list .white_board {
+  width: 250px;
+  height: 5px;
+  background-color: #e5e5e5;
 }/*# sourceMappingURL=main.css.map */
