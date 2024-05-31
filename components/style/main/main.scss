@@ -159,7 +159,8 @@ img {
 .main_row {
   display: grid;
   //
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
 }
 .main_card_row {
   display: grid;
@@ -206,13 +207,56 @@ img {
 .main_aside_row {
   .main-aside_top {
   }
-  .main_aside_block_list {
-    background-color: #ffffff;
 
+  .main_aside_block_list {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 330px;
+    min-height: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+
+    li {
+    }
+    li > h4 {
+      line-height: 0.1;
+    }
+    li > p {
+      font-size: 10px;
+      color: #a2a2a2;
+      max-width: 240px;
+    }
     .white_board {
-      width: 250px;
+      width: 80%;
       height: 5px;
       background-color: #e5e5e5;
     }
+  }
+}
+.main_aside_bottom {
+  .main_aside_block_list {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 330px;
+    min-height: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      font-size: 20px;
+      line-height: 10px;
+      margin-bottom: 25px;
+    }
+  }
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
   }
 }
